@@ -16,12 +16,15 @@ services:
     networks:
       - postgres_brewery
 
-  pgadmin:
+  pgadmin_brewery:
+    container_name: pgadmin_brewery
     image: dpage/pgadmin4:latest
     environment:
       PGADMIN_DEFAULT_EMAIL: "lcarraro.oliveira@gmail.com"
       PGADMIN_DEFAULT_USERNAME: "root"
       PGADMIN_DEFAULT_PASSWORD: "root"
+    volumes:
+      - pgadmin_brewery:/var/lib/pgadmin
     ports:
       - "16543:80"
     depends_on:
@@ -35,4 +38,5 @@ networks:
 
 volumes:
   postgres_brewery:
+  pgadmin_brewery:
 

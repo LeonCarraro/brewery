@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.leoncarraro</groupId>
+		<artifactId>brewery-spring-boot</artifactId>
+		<version>${revision}</version>
+	</parent>
+
+	<artifactId>brewery-spring-boot-parent</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Brewery Spring Boot Parent</name>
+	<description>POM que provê o gerenciamento das dependências e plugins utilizados nos serviços relacionados ao projeto Brewery.</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>11</java.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Brewery Spring Boot API -->
+	    	<dependency>
+	    		<groupId>com.leoncarraro</groupId>
+	    		<artifactId>brewery-spring-boot-api</artifactId>
+				<version>${revision}</version>
+	    	</dependency>
+
+			<!-- Brewery Spring Boot JPA -->
+	    	<dependency>
+	    		<groupId>com.leoncarraro</groupId>
+	    		<artifactId>brewery-spring-boot-jpa</artifactId>
+				<version>${revision}</version>
+	    	</dependency>
+
+	    	<!-- Brewery Spring Boot Shared -->
+	    	<dependency>
+	    		<groupId>com.leoncarraro</groupId>
+	    		<artifactId>brewery-spring-boot-shared</artifactId>
+				<version>${revision}</version>
+	    	</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

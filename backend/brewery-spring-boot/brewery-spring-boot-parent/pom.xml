@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>com.leoncarraro</groupId>
@@ -25,25 +25,25 @@
 	<dependencyManagement>
 		<dependencies>
 			<!-- Brewery Spring Boot API -->
-	    	<dependency>
-	    		<groupId>com.leoncarraro</groupId>
-	    		<artifactId>brewery-spring-boot-api</artifactId>
+			<dependency>
+				<groupId>com.leoncarraro</groupId>
+				<artifactId>brewery-spring-boot-api</artifactId>
 				<version>${revision}</version>
-	    	</dependency>
+			</dependency>
 
 			<!-- Brewery Spring Boot JPA -->
-	    	<dependency>
-	    		<groupId>com.leoncarraro</groupId>
-	    		<artifactId>brewery-spring-boot-jpa</artifactId>
+			<dependency>
+				<groupId>com.leoncarraro</groupId>
+				<artifactId>brewery-spring-boot-jpa</artifactId>
 				<version>${revision}</version>
-	    	</dependency>
+			</dependency>
 
-	    	<!-- Brewery Spring Boot Shared -->
-	    	<dependency>
-	    		<groupId>com.leoncarraro</groupId>
-	    		<artifactId>brewery-spring-boot-shared</artifactId>
+			<!-- Brewery Spring Boot Shared -->
+			<dependency>
+				<groupId>com.leoncarraro</groupId>
+				<artifactId>brewery-spring-boot-shared</artifactId>
 				<version>${revision}</version>
-	    	</dependency>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 </project>

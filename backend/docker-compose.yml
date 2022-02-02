@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  postgres_brewery:
+    container_name: postgres_brewery
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: brewery
+      PGDATA: /data/postgres_brewery
+    volumes:
+      - postgres_brewery:/data/postgres_brewery
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres_brewery
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "lcarraro.oliveira@gmail.com"
+      PGADMIN_DEFAULT_USERNAME: "root"
+      PGADMIN_DEFAULT_PASSWORD: "root"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres_brewery
+    networks:
+      - postgres_brewery
+
+networks:
+  postgres_brewery:
+    driver: bridge
+
+volumes:
+  postgres_brewery:
+
